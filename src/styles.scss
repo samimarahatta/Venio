@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+// tailwind css imports
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+// base
+@import "./assets/styles/base/common";
+@import "./assets/styles/base/typography";
+
+//components
+@import "./assets/styles/components/buttons";
+@import "./assets/styles/components/dropdown";
+
+// layouts
+@import "./assets/styles/layouts/footer";
+@import "./assets/styles/layouts/forms";
+@import "./assets/styles/layouts/header";
+@import "./assets/styles/layouts/navigation";

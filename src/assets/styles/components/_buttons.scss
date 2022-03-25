@@ -1,0 +1,14 @@
+.v-btn {
+  &-login {
+    @apply w-48 h-11 bg-secondary-400 text-white rounded-full hover:bg-secondary-300;
+  }
+  &-primary {
+    @apply px-8 py-3 bg-primary-300 text-white rounded hover:bg-primary-400;
+  }
+  &-secondary {
+    @apply px-8 py-3 bg-secondary-400 text-white rounded hover:bg-secondary-300;
+  }
+  &-close {
+    @apply px-8 py-3 bg-close text-white rounded;
+  }
+}
