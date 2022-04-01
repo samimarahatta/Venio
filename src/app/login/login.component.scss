@@ -1,0 +1,31 @@
+.close {
+  line-height: 1;
+  &-icon {
+    height: 20px;
+    width: 20px;
+    mask: url(./../../assets/img/icons/close.svg);
+    background: #c62828;
+    display: inline-flex;
+  }
+}
+
+.v-terms-col {
+  width: calc(100% - 3.438rem);
+}
+.k-animation-container {
+  max-width: 360px;
+}
+.k-popup {
+  &:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    mask: url(../../assets/img/icons/down_arrow.svg);
+    background: #fff;
+    right: 4.375rem;
+    bottom: -21px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

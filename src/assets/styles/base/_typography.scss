@@ -2,7 +2,7 @@ body {
   font-size: 0.75rem;
   letter-spacing: 0.016rem;
   font-family: "Roboto", sans-serif;
-  line-height: 1.5rem;
+  line-height: 1.5;
 }
 h1 {
   font-size: 6rem;
@@ -38,5 +38,19 @@ button {
   font-weight: 500;
   text-transform: uppercase;
 }
+
 // subtitle1
+.subtitle-lg {
+  font-size: 1rem;
+}
+.subtitle-sm {
+  font-size: 14px;
+  font-weight: 600;
+}
 // subtitle2
+.k-popup {
+  font-size: 12px;
+  border: none !important;
+  padding: 15px;
+  box-shadow: 0 5px 20px #00000029;
+}

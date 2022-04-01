@@ -21,6 +21,7 @@ module.exports = {
         label: "#00000099",
         "gray-bg": "#00000008",
         "text-color": "#000000DE",
+        "login-bg": "#0000000C"
       },
     },
   },

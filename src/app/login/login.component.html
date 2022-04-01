@@ -1,53 +1,99 @@
 <div class="p-14">
-<div class="flex flex-wrap rounded-lg drop-shadow-2xl overflow-hidden">
-  <div class="lg:basis-1/2 basis-full bg-primary-400 lg:h-screen flex flex-col justify-center items-center p-10">
-    <img src="../../assets/img/login-bg.svg" class="h-96" alt="">
-    <h6 class="text-white pt-8">Faster Way To Process The Data, Eliminate Down Time Secure Your Data & More
-      Productive!!!</h6>
-  </div>
-  <div class="lg:basis-1/2 basis-full bg-white lg:h-screen flex flex-col justify-center items-center">
-    <div class="w-96 px-5 py-10 text-center">
-      <div class="w-60 mx-auto mb-3.5">
-        <img src="../../assets/img/logo.svg" alt="">
-        <p class="text-right text-primary-300">v.10.0.0</p>
-      </div>
+  <div class="flex flex-wrap rounded-lg drop-shadow-2xl overflow-hidden">
+    <div class="lg:basis-1/2 basis-full bg-primary-400 lg:h-screen flex flex-col justify-center items-center p-10">
+      <img src="../../assets/img/login-bg.svg" class="h-96" alt="">
+      <h6 class="text-white pt-8">Faster Way To Process The Data, Eliminate Down Time Secure Your Data & More
+        Productive!!!</h6>
+    </div>
+    <div class="lg:basis-1/2 basis-full bg-white lg:h-screen flex flex-col justify-center items-center">
+      <div class="w-96 px-5 py-10 text-center">
+        <div class="w-60 mx-auto mb-3.5">
+          <img src="../../assets/img/logo.svg" alt="">
+          <p class="text-right text-primary-300">v.10.0.0</p>
+        </div>
         <small class="tracking-widest font-medium text-close">WELCOME TO VENIO SYSTEMS</small>
         <form action="" class="mt-[1.875rem]">
-        <div class="form-group mb-5">
-          <label for="">Username</label>
-          <input type="text" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="">Password</label>
-          <input type="password" class="form-control">
-          <img src="../../assets/img/icons/view_password.svg" alt="" class="w-[1.375rem] absolute right-2.5 top-3">
-        </div>
-        <div class="text-right mb-6 mt-2.5">
-          <a href="">
-            <small class="tracking-widest font-medium text-close hover:text-primary-400">FORGOT PASSWORD</small>
-          </a>
-        </div>
-        <button class="v-btn-login">login</button>
-      </form>
-      <!-- <button>Toggle Popup</button> -->
-    <kendo-popup [anchor]="$any(anchor)" *ngIf="show">
-      <div class="text-left" style="padding: 30px; background-color: #fcf7f8">
-        <div class="flex">
-          <div></div>
-          <div>
-            <h6>Terms of Use</h6>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Labore et dolore magna aliqua. Ut enim ad minim veniam,Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-            </p>
-            <button>ACCEPT</button>
+          <div class="form-group mb-5">
+            <label for="">Username</label>
+            <input type="text" class="form-control">
           </div>
-        </div>
+          <div class="form-group">
+            <label for="">Password</label>
+            <input type="password" class="form-control">
+            <img src="../../assets/img/icons/view_password.svg" alt="" class="w-[1.375rem] absolute right-2.5 top-3">
+          </div>
+          <div class="text-right mb-6 mt-2.5">
+            <span #anchor2 (click)="showForget = !showForget">
+              <small class="tracking-widest font-medium text-close hover:text-primary-400">FORGOT PASSWORD</small>
+            </span>
+          </div>
+          <button class="v-btn-login">login</button>
+        </form>
+        <!-- <button>Toggle Popup</button> -->
+        <kendo-popup [animate]="animate" [anchor]="$any(anchor)" [anchorAlign]="anchorAlign" [popupAlign]="popupAlign"
+          *ngIf="show">
+          <div class="text-left">
+            <div class="text-right close">
+              <button class="icon close-icon" (click)="show = !show"></button>
+            </div>
+            <div class="flex justify-between">
+              <span class="w-10 h-10 p-3 bg-login-bg rounded-full">
+                <img src="../../assets/img/icons/profile.svg" alt="">
+              </span>
+              <div class="v-terms-col pt-2.5">
+                <h6 class="subtitle-lg pb-5">Terms of Use</h6>
+                <div>
+                  <p class="pb-5">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam,Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                  </p>
+                  <p class="pb-5">
+                    Labore et dolore magna aliqua. Ut enim ad minim veniam,Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    veniam.
+                  </p>
+                  <p>
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                  </p>
+                </div>
+                <div class="text-right mt-5">
+                  <button class="uppercase text-secondary-400 font-medium">ACCEPT</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </kendo-popup>
+        <kendo-popup [animate]="animate" [anchor]="$any(anchor2)" [anchorAlign]="anchorAlign" [popupAlign]="popupAlign"
+          *ngIf="showForget">
+          <div class="text-left">
+            <div class="text-right close">
+              <button class="close-icon" (click)="showForget = !showForget"></button>
+            </div>
+            <div class="flex justify-between">
+              <span class="w-10 h-10 p-3 bg-login-bg rounded-full">
+                <img src="../../assets/img/icons/profile.svg" alt="">
+              </span>
+              <div class="v-terms-col pt-2.5">
+                <h6 class="subtitle-lg pb-5">Reset Password</h6>
+                <form action="">
+                  <div class="form-group mb-5">
+                    <label for="">Username / Email ID</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <p>Please enter the username or email to reset the password!!!</p>
+                  <div class="text-right mt-5">
+                    <button class="uppercase text-secondary-400 font-medium">ACCEPT</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </kendo-popup>
+        <p class="mt-6">By Clicking login, you will accepting our
+          <span class="text-primary-400" #anchor kendoButton (click)="show = !show">Terms of use & Privacy policy.</span>
+        </p>
       </div>
-    </kendo-popup>
-      <p class="mt-6">By Clicking login, you will accepting our
-        <span class="text-primary-400" #anchor kendoButton (click)="show = !show">Terms of use & Privacy policy.</span>
-      </p>
     </div>
   </div>
-</div>
 </div>
