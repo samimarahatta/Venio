@@ -1,0 +1,10 @@
+.close {
+    line-height: 1;
+    &-icon {
+      height: 20px;
+      width: 20px;
+      mask: url(./../../../../assets/img/icons/close.svg);
+      background: #c62828;
+      display: inline-flex;
+    }
+  }

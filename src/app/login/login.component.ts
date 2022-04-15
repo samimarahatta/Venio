@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { Align } from '@progress/kendo-angular-popup';
 
 @Component({
@@ -12,8 +12,11 @@ export class LoginComponent implements OnInit {
 
    anchorAlign: Align = { horizontal: "right", vertical: "top" };
    popupAlign: Align = { horizontal: "right", vertical: "bottom" };
+
    show = false;
    showForget = false;
+   resetPassword=false;
+
    public enabled = true;
    public duration = 200;
    public type = "slide";
@@ -30,12 +33,22 @@ export class LoginComponent implements OnInit {
 
     return false;
   }
+loadForgetPassword(){
+  this.showForget = !this.showForget;
+  // this.changeDetectorRef.markForCheck();
 
-  // public get hasDirection(): boolean {
-  //   return this.type === "slide" || this.type === "expand";
-  // }
+}
 
-  constructor() { }
+
+  showEmailSentMsg(){
+    this.resetPassword = true;
+    this.changeDetectorRef.markForCheck();
+  }
+
+ 
+  constructor(
+ private changeDetectorRef: ChangeDetectorRef
+){}
 
   ngOnInit(): void {
   }

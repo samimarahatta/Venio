@@ -15,14 +15,16 @@ h2 {
   font-weight: 300;
 }
 h3 {
-  font-size: 3.75rem;
+  font-size: 3rem;
   letter-spacing: -0.03rem;
   font-weight: 400;
 }
 h4 {
-  font-size: 3.75rem;
+  font-size: 2.125rem;
   letter-spacing: -0.03rem;
   font-weight: 400;
+  line-height: 1;
+
 }
 h5 {
   font-size: 1.5rem;
@@ -49,8 +51,30 @@ button {
 }
 // subtitle2
 .k-popup {
-  font-size: 12px;
+
   border: none !important;
-  padding: 15px;
-  box-shadow: 0 5px 20px #00000029;
+
+  box-shadow: none;
+  background: transparent;
+  padding-bottom: 20px;
+  &>div{
+    font-size: 12px;
+    border: none !important;
+    padding: 15px;
+    box-shadow: 0 5px 20px #00000029;
+    background-color: #fff;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: "";
+      height: 30px;
+      width: 30px;
+      mask: url(../../img/icons/down_arrow.svg);
+      background: #fff;
+      right: 2.375rem;
+      bottom: -21px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
 }

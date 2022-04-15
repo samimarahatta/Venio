@@ -1,0 +1,70 @@
+<div class="btn-group flex items-center pb-7">
+    <button class="v-btn-transparent mr-1.5">
+        <img src="../../assets/img/icons/case.svg" class="h-5" alt="">
+    </button>
+
+
+    <kendo-dropdownbutton [data]="listItems" class=" mr-1.5" [imageUrl]="'../../assets/img/icons/production.svg'">
+    </kendo-dropdownbutton>
+    <a href="" class="v-btn-transparent mr-1.5" [routerLink]="['/template']">
+        <img src="../../assets/img/icons/template.svg" class="h-5" alt="">
+
+    </a>
+    <button class="v-btn-transparent mr-1.5" #anchor2 (click)="showForget = !showForget">
+        <img src="../../assets/img/icons/widgets.svg" class="h-5" alt="">
+    </button>
+</div>
+
+<kendo-popup [anchor]="$any(anchor2)" *ngIf="showForget">
+    <div>
+        <div class="flex justify-between mb-5">
+            <p class="subtitle-sm uppercase">All widgets</p>
+            <button class="icon close-icon"></button>
+        </div>
+        <div class="grid grid-cols-4 grid-flow-row gap-4 text-center mb-10">
+            <div class="px-1 py-2 rounded-lg shadow-3xl bg-white">
+                <img src="../../assets/img/icons/widgets.svg" class="h-6 mx-auto mb-2" alt="">
+                <small class="uppercase">Sample</small>
+            </div>
+            <div class="px-1 py-2 rounded-lg shadow-3xl bg-white">
+                <img src="../../assets/img/icons/widgets.svg" class="h-6 mx-auto mb-2" alt="">
+                <small class="uppercase">Sample</small>
+            </div>
+            <div class="px-1 py-2 rounded-lg shadow-3xl bg-white">
+                <img src="../../assets/img/icons/widgets.svg" class="h-6 mx-auto mb-2" alt="">
+                <small class="uppercase">Sample</small>
+            </div>
+            <div class="px-1 py-2 rounded-lg shadow-3xl bg-white">
+                <img src="../../assets/img/icons/widgets.svg" class="h-6 mx-auto mb-2" alt="">
+                <small class="uppercase">Sample</small>
+            </div>
+
+        </div>
+        <div>
+            <p class="subtitle-sm uppercase mb-5">Add widgets</p>
+            <div class="grid grid-cols-4 grid-flow-row gap-4 text-center">
+                <div class="px-1 py-2 rounded-lg shadow-3xl bg-white">
+                    <img src="../../assets/img/icons/case.svg" class="h-6 mx-auto mb-2" alt="">
+                    <small class="uppercase">case</small>
+                </div>
+                <div class="px-1 py-2 rounded-lg shadow-3xl bg-white">
+                    <img src="../../assets/img/icons/document.svg" class="h-6 mx-auto mb-2" alt="">
+                    <small class="uppercase">document</small>
+                </div>
+                <div class="px-1 py-2 rounded-lg shadow-3xl bg-white">
+                    <img src="../../assets/img/icons/legal-hold.svg" class="h-6 mx-auto mb-2" alt="">
+                    <small class="uppercase">legal hold</small>
+                </div>
+                <div class="px-1 py-2 rounded-lg shadow-3xl bg-white">
+                    <img src="../../assets/img/icons/production.svg" class="h-6 mx-auto mb-2" alt="">
+                    <small class="uppercase">production</small>
+                </div>
+                <div class="px-1 py-2 rounded-lg shadow-3xl bg-white">
+                    <img src="../../assets/img/icons/review.svg" class="h-6 mx-auto mb-2" alt="">
+                    <small class="uppercase">review set</small>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</kendo-popup>

@@ -1,0 +1,30 @@
+.grid{
+    grid-auto-rows: minmax(min-content, max-content);
+    //  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+th{
+    background-color: #F5F6FA;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    text-align: left;
+}
+td{
+    padding: 6px 20px ;
+}
+
+.timeline{
+    position: relative;
+    padding-left: 30%;
+    &:before{
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 2px;
+        background-color: #00000005;
+        top: 0;
+        left: 20%;
+    }
+    .content{
+        margin-bottom: 40px;
+    }
+}

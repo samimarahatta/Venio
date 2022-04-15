@@ -1,0 +1,58 @@
+<kendo-appbar position="top" positionMode="fixed" class="bg-white">
+
+    <kendo-appbar-section>
+    <a href="" [routerLink]="['dashboard']">
+        <img src="../../../assets/img/icons/art logo.svg" alt="" class="logo">
+        </a>
+    </kendo-appbar-section>
+
+    <kendo-appbar-spacer width="32px"></kendo-appbar-spacer>
+
+
+    <kendo-appbar-spacer></kendo-appbar-spacer>
+
+    <kendo-appbar-section class="actions">
+        <!-- <kendo-badge-container> -->
+        <button kendoButton fillMode="flat">
+            <img src="../../../assets/img/icons/notification.svg" alt="">
+        </button>
+        <button kendoButton fillMode="flat">
+            <img src="../../../assets/img/icons/settings.svg" alt="">
+        </button>
+        <button kendoButton fillMode="flat">
+            <img src="../../../assets/img/icons/logoff.svg" alt="">
+        </button>
+        <button kendoButton fillMode="flat">
+            <img src="../../../assets/img/icons/profile.svg" alt="">
+        </button>
+
+        <!-- </kendo-badge-container> -->
+    </kendo-appbar-section>
+
+    <kendo-appbar-section>
+        <!-- <kendo-avatar [imageSrc]="kendokaAvatar" shape="circle" width="26px" height="26px"></kendo-avatar> -->
+    </kendo-appbar-section>
+</kendo-appbar>
+
+<div class="sidebar fixed h-full bg-close text-center pt-[6.313rem] pb-6 w-[4.313rem] flex flex-col justify-between items-center">
+
+    <ul>
+        <li>
+            <a href="">
+                <img src="../../../assets/img/icons/notification.svg"  class="mx-auto" alt="">
+                <p class="uppercase">reports</p>
+            </a>
+        
+        </li>
+    </ul>
+    <ul>
+        <li  class="pb-3.5"><a href=""><img src="../../../assets/img/icons/notification.svg" class="mx-auto" alt="">
+            <p class="uppercase">Faq</p></a>
+        </li>
+        <li><a href=""><img src="../../../assets/img/icons/notification.svg" class="mx-auto" alt="">
+            <p class="uppercase">support</p></a></li>
+    </ul>
+
+
+
+</div>

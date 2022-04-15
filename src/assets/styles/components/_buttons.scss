@@ -11,4 +11,10 @@
   &-close {
     @apply px-8 py-3 bg-close text-white rounded;
   }
+  &-transparent{
+    @apply border rounded py-1 px-2;
+  }
+  &-add{
+    @apply h-5 w-5 inline-flex justify-center items-center bg-secondary-400 rounded-full text-white;
+  }
 }

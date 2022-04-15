@@ -23,16 +23,30 @@
             <img src="../../assets/img/icons/view_password.svg" alt="" class="w-[1.375rem] absolute right-2.5 top-3">
           </div>
           <div class="text-right mb-6 mt-2.5">
-            <span #anchor2 (click)="showForget = !showForget">
+            <span class="cursor-pointer" #anchor2 (click)="showForget = !showForget">
               <small class="tracking-widest font-medium text-close hover:text-primary-400">FORGOT PASSWORD</small>
             </span>
           </div>
           <button class="v-btn-login">login</button>
         </form>
         <!-- <button>Toggle Popup</button> -->
-        <kendo-popup [animate]="animate" [anchor]="$any(anchor)" [anchorAlign]="anchorAlign" [popupAlign]="popupAlign"
+        
+        <p class="mt-6">By Clicking login, you will accepting our
+          <span class="text-primary-400 cursor-pointer" #anchor kendoButton (click)="show = !show">Terms of use & Privacy policy.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<kendo-popup 
+          [animate]="animate" 
+          [anchor]="$any(anchor)" 
+          [anchorAlign]="anchorAlign" 
+          [popupAlign]="popupAlign"
           *ngIf="show">
-          <div class="text-left">
+          <div>
             <div class="text-right close">
               <button class="icon close-icon" (click)="show = !show"></button>
             </div>
@@ -66,9 +80,9 @@
         </kendo-popup>
         <kendo-popup [animate]="animate" [anchor]="$any(anchor2)" [anchorAlign]="anchorAlign" [popupAlign]="popupAlign"
           *ngIf="showForget">
-          <div class="text-left">
+          <div>
             <div class="text-right close">
-              <button class="close-icon" (click)="showForget = !showForget"></button>
+              <button class="close-icon" (click)="loadForgetPassword()"></button>
             </div>
             <div class="flex justify-between">
               <span class="w-10 h-10 p-3 bg-login-bg rounded-full">
@@ -83,17 +97,17 @@
                   </div>
                   <p>Please enter the username or email to reset the password!!!</p>
                   <div class="text-right mt-5">
-                    <button class="uppercase text-secondary-400 font-medium">ACCEPT</button>
+                    <button class="uppercase text-secondary-400 font-medium" (click)="showEmailSentMsg()">Reset</button>
                   </div>
                 </form>
+                <!-- <div *ngIf="resetPassword">
+                  <p>Email with reset password link successfully sent to your registered email id.</p>
+                  <div class="text-right mt-5">
+                    <button class="uppercase text-close font-medium" (click)="loadForgetPassword()">Close</button>
+                  </div>
+                </div> -->
+                
               </div>
             </div>
           </div>
         </kendo-popup>
-        <p class="mt-6">By Clicking login, you will accepting our
-          <span class="text-primary-400" #anchor kendoButton (click)="show = !show">Terms of use & Privacy policy.</span>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>

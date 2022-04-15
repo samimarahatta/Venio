@@ -1,0 +1,7 @@
+.content{
+    p{
+        &:before{
+            @apply absolute content-[''] h-2.5 w-2.5 bg-close left-[-0.313rem] top-0 rounded-full
+        }
+    }
+}
