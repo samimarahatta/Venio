@@ -50,31 +50,3 @@ button {
   font-weight: 600;
 }
 // subtitle2
-.k-popup {
-
-  border: none !important;
-
-  box-shadow: none;
-  background: transparent;
-  padding-bottom: 20px;
-  &>div{
-    font-size: 12px;
-    border: none !important;
-    padding: 15px;
-    box-shadow: 0 5px 20px #00000029;
-    background-color: #fff;
-    position: relative;
-    &:before {
-      position: absolute;
-      content: "";
-      height: 30px;
-      width: 30px;
-      mask: url(../../img/icons/down_arrow.svg);
-      background: #fff;
-      right: 2.375rem;
-      bottom: -21px;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-  }
-}

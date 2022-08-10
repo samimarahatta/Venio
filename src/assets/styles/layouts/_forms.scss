@@ -2,7 +2,7 @@
   @apply relative;
 
   label {
-    @apply absolute text-label bg-white left-2.5 top-[-0.438rem] px-1;
+    @apply absolute text-label bg-white left-2.5 top-[-0.438rem] px-1 z-10;
   }
   .form-control {
     @apply border w-full h-[2.875rem] rounded px-3.5 focus:outline-secondary-400;

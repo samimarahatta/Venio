@@ -4,6 +4,9 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+//theme
+@import "./assets/styles/theme/kendo-theme";
+
 // base
 @import "./assets/styles/base/common";
 @import "./assets/styles/base/typography";
@@ -11,6 +14,9 @@
 //components
 @import "./assets/styles/components/buttons";
 @import "./assets/styles/components/dropdown";
+@import "./assets/styles/components/popup";
+@import "./assets/styles/components/stepper";
+@import "./assets/styles/components/upload";
 
 // layouts
 @import "./assets/styles/layouts/footer";

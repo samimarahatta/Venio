@@ -22,17 +22,22 @@ module.exports = {
         cancel: "#455A64",
         close: "#718792",
         label: "#00000099",
-        red:"#ffdfdc",
+        red: "#ffdfdc",
         orange: "#fff7e5",
         green: "#dee6cd",
         "gray-bg": "#00000008",
         "text-color": "#000000DE",
         "login-bg": "#0000000C",
-        "timeline": "#00000005"
+        timeline: "#00000005",
+        "light-gray": "#ebebeb",
+        "gray-border": "#d9d9d9",
       },
-      boxShadow:{
-        '3xl':'0px 3px 10px #00000029'
-      }
+      boxShadow: {
+        "3xl": "0px 3px 10px #00000029",
+      },
+      fontSize: {
+        xxs: ".625rem",
+      },
     },
   },
   plugins: [],

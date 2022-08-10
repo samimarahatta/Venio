@@ -1,0 +1,25 @@
+<p class="text-secondary-500 subtitle-lg">
+    Please select one the option to import files
+</p>
+<div class="grid grid-cols-5 gap-10 mt-7 items-center">
+    <div class="col-span-2">
+        <kendo-upload 
+            [saveUrl]="uploadSaveUrl" 
+            [removeUrl]="uploadRemoveUrl" 
+            [autoUpload]="false"
+            value = "select"
+            >
+        </kendo-upload>
+    </div>
+    <div class="col-span-1 text-center">
+        <span class="w-12 h-12 rounded-full text-secondary-400 bg-secondary-200 inline-flex items-center justify-center text-sm">
+            OR
+        </span>
+    </div>
+    <div class="col-span-2">
+        Click here to upload form <button class="v-btn-secondary ml-3">Repository</button>
+    </div>
+</div>
+<div class="text-right mt-6">
+    <button class="v-btn-primary">Process</button>
+</div>

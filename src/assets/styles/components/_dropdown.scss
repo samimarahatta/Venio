@@ -11,3 +11,12 @@ kendo-button-list{
 .k-icon-buton{
     @apply py-1 px-2;
 }
+.k-picker{
+    background: none;
+}
+.k-dropdownlist.form-control{
+    padding-right: 0 !important;
+    button{
+        @apply border-l border-slate-200;
+    }
+}

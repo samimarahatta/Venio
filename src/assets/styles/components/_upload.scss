@@ -1,0 +1,30 @@
+.k-upload{
+    @apply border-dashed border-slate-200 ;
+    .k-dropzone{
+        @apply bg-transparent flex flex-col py-6 px-3.5;
+        .k-button{
+            @apply bg-transparent border-0 bg-none text-gray-300;
+        }
+        .k-dropzone-hint{
+            @apply text-gray-300 text-xxs;
+        }
+    }
+    .k-actions{
+        @apply border-0;
+    }
+    .k-upload-files{
+        @apply flex flex-wrap border-0 px-2;
+        li.k-file{
+            @apply bg-light-gray p-1 text-xs mr-0.5 mb-0.5 border border-gray-border rounded-full;
+            .k-icon-button.k-button-md{
+                @apply p-0 text-error;
+            }
+            .k-progressbar, .k-file-group, .k-file-size{
+                @apply hidden;
+            }
+            .k-file-name-size-wrapper{
+                @apply min-h-0 m-0
+            }
+        }
+    }
+}

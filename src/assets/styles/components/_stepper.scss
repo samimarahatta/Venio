@@ -1,0 +1,34 @@
+@mixin stepper ($bg-color,$border-color,$text-color) {
+ background-color: $bg-color;
+ border-color: $border-color;
+ color: $text-color;   
+}
+
+.k-stepper{
+    .k-step{
+        min-height: 60px;
+        .k-step-indicator{
+            @include stepper($close, $close, $close);   
+        }
+        .k-step-label{
+            @apply uppercase font-medium;
+        }
+    }
+    .k-step-current{
+        .k-step-indicator{
+            @include stepper($secondary, $secondary, $white);    
+           
+        }
+        .k-step-label{
+            @apply font-medium text-secondary-400
+        }
+    }
+    .k-step-done{
+        .k-step-indicator{
+            @include stepper($primary, $primary, $white);
+        }
+    }
+     .k-step-link:focus .k-step-indicator::after{
+        display: none;
+     }
+}

@@ -17,6 +17,14 @@ import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { TemplateComponent } from './template/template.component';
 import { DashboardTopbarComponent } from './dashboard/components/dashboard-topbar/dashboard-topbar.component';
+import { NewUploadComponent } from './new-upload/new-upload.component';
+import { LayoutModule } from '@progress/kendo-angular-layout';
+import { SelectComponent } from './new-upload/component/select/select.component';
+import { SourceComponent } from './new-upload/component/source/source.component';
+import { UploadComponent } from './new-upload/component/upload/upload.component';
+import { UploadModule } from '@progress/kendo-angular-upload';
+import { HttpClientModule } from "@angular/common/http";
+import { PopoverModule } from "@progress/kendo-angular-tooltip";
 
 
 @NgModule({
@@ -27,7 +35,11 @@ import { DashboardTopbarComponent } from './dashboard/components/dashboard-topba
     DashboardComponent,
     TimelineComponent,
     TemplateComponent,
-    DashboardTopbarComponent
+    DashboardTopbarComponent,
+    NewUploadComponent,
+    SelectComponent,
+    SourceComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
@@ -39,10 +51,12 @@ import { DashboardTopbarComponent } from './dashboard/components/dashboard-topba
     MenuModule,
     RouterModule,
     DropDownsModule,
-    ButtonsModule
-
+    ButtonsModule,
+    LayoutModule,
+    UploadModule,
+    HttpClientModule,
+    PopoverModule 
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

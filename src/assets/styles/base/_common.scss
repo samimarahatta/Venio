@@ -4,3 +4,6 @@ body {
 a {
   @apply text-primary-400;
 }
+.page-container{
+  min-height: calc(100vh - 100px);
+}
